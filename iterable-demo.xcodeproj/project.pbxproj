@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		DD68B37725F1994800A1F531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD68B37625F1994800A1F531 /* Assets.xcassets */; };
 		DD68B37A25F1994800A1F531 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD68B37925F1994800A1F531 /* Preview Assets.xcassets */; };
 		DD68B37D25F1994800A1F531 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD68B37B25F1994800A1F531 /* LaunchScreen.storyboard */; };
+		DD68B38725F1C88100A1F531 /* IterableSDK in Frameworks */ = {isa = PBXBuildFile; productRef = DD68B38625F1C88100A1F531 /* IterableSDK */; };
+		DD68B38925F1C88100A1F531 /* IterableAppExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = DD68B38825F1C88100A1F531 /* IterableAppExtensions */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD68B38925F1C88100A1F531 /* IterableAppExtensions in Frameworks */,
+				DD68B38725F1C88100A1F531 /* IterableSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +95,10 @@
 			dependencies = (
 			);
 			name = "iterable-demo";
+			packageProductDependencies = (
+				DD68B38625F1C88100A1F531 /* IterableSDK */,
+				DD68B38825F1C88100A1F531 /* IterableAppExtensions */,
+			);
 			productName = "iterable-demo";
 			productReference = DD68B36D25F1994700A1F531 /* iterable-demo.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +126,9 @@
 				Base,
 			);
 			mainGroup = DD68B36425F1994700A1F531;
+			packageReferences = (
+				DD68B38525F1C88100A1F531 /* XCRemoteSwiftPackageReference "swift-sdk" */,
+			);
 			productRefGroup = DD68B36E25F1994700A1F531 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -345,6 +356,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DD68B38525F1C88100A1F531 /* XCRemoteSwiftPackageReference "swift-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/iterable/swift-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.20;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DD68B38625F1C88100A1F531 /* IterableSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD68B38525F1C88100A1F531 /* XCRemoteSwiftPackageReference "swift-sdk" */;
+			productName = IterableSDK;
+		};
+		DD68B38825F1C88100A1F531 /* IterableAppExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD68B38525F1C88100A1F531 /* XCRemoteSwiftPackageReference "swift-sdk" */;
+			productName = IterableAppExtensions;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DD68B36525F1994700A1F531 /* Project object */;
 }
